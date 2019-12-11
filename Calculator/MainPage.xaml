@@ -7,19 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1000" Width="988">
-    <Grid Margin="0,0,10,0" Width="auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  >
+    <Grid Margin="170,57,170,0" Width="auto" Height="auto"  >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="322*"/>
-            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="426*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="42*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="163*"/>
-            <RowDefinition Height="264*"/>
-            <RowDefinition Height="73*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="149*"/>
+            <RowDefinition Height="497*"/>
+            <RowDefinition Height="138*"/>
         </Grid.RowDefinitions>
-        <Image x:Name ="logo" Stretch="Uniform" Source="Pictures/Calculator_Frame.tif"  MaxHeight="950" Grid.RowSpan="3" Grid.ColumnSpan="3" />
-        <Grid Grid.Column="1" Grid.Row="1">
+        <Image x:Name ="logo" Stretch="Uniform" Source="Pictures/Calculator_Frame.tif"  MaxHeight="950" Grid.RowSpan="5" Grid.ColumnSpan="5" />
+        <Grid Grid.Column="2" Grid.Row="3">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50*"/>
                 <RowDefinition Height="50*"/>
@@ -34,7 +38,43 @@
                 <ColumnDefinition Width="50*"/>
                 <ColumnDefinition Width="50*"/>
             </Grid.ColumnDefinitions>
+
+            <Button Content="Button" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button Content="Button"  Grid.Column="1" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button Content="Button"  Grid.Column="2" HorizontalAlignment="Center"  Height="64" Width="87"/>
+            <Button x:Name="backspace" Content="⇦"  Grid.Column="3" HorizontalAlignment="Center" Height="64" Width="87"/>
+
+            <Button Content="Button"  Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button Content="Button"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"  Height="64" Width="87"/>
+            <Button Content="Button"  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center"  Height="64" Width="87"/>
+            <Button x:Name="divide" Content="/"  Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center"  Height="64" Width="87"/>
+
+            <Button x:Name="num7" Content="7"  Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center"  Height="64" Width="87"/>
+            <Button x:Name="num8" Content="8"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="num9" Content="9"  Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="times" Content="x"  Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center"  Height="64" Width="87"/>
+
+            <Button x:Name="num4" Content="4"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center"  Height="64" Width="87"/>
+            <Button x:Name="num5" Content="5"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="num6" Content="6"  Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="subt" Content="-"  Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" Height="64" Width="87"/>
+
+            <Button x:Name="num1" Content="1"  Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" Height="64" Width="87" Click="display1"/>
+            <Button x:Name="num2" Content="2"  Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="num3" Content="3"  Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center"  Height="64" Width="87"/>
+            <Button x:Name="add" Content="+"  Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center"  Height="64" Width="87"/>
+
+            <Button Content="+/-"  Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="num0" Content="0"  Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Height="64" Width="87" Click="display0"/>
+            <Button x:Name="_decimal" Content="."  Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" Height="64" Width="87"/>
+            <Button x:Name="equ" Content="="  Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" Height="64" Width="87"/>
+
+
+
         </Grid>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" CornerRadius="55" >
+            <ListBox x:Name="displayer" />
+        </Border>
 
     </Grid>
 
