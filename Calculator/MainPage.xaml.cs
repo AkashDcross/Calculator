@@ -27,11 +27,14 @@ namespace Calculator
     public sealed partial class MainPage : Page
     {
         List<int> numbers = new List<int>();
+        string joiner;
+
+
 
         public MainPage()
         {
             this.InitializeComponent();
-
+            displayer.FontSize = 40;
             FontSizing();
 
 
@@ -75,9 +78,9 @@ namespace Calculator
             numbers.Add(0);
 
           
-            displayer.FontSize =40;
 
-            string joiner = string.Join(", ", numbers);
+           joiner = string.Join("", numbers);
+            
 
             displayer.Items.Add(joiner);
 
@@ -87,8 +90,13 @@ namespace Calculator
 
         private void display1(object sender, RoutedEventArgs e)
         {
+            displayer.Items.Clear();
+
+
             numbers.Add(1);
-            displayer.Items.Add("1");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
+
         }
 
         private void display2(object sender, RoutedEventArgs e)
