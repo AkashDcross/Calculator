@@ -26,8 +26,10 @@ namespace Calculator
 
     public sealed partial class MainPage : Page
     {
-        List<int> numbers = new List<int>();
+        List<String> numbers = new List<String>();
+        String currentVal;
         string joiner;
+        int[] numholder;
 
 
 
@@ -62,7 +64,6 @@ namespace Calculator
             equ.FontSize = 40; 
             times.FontSize = 40;
             _decimal.FontSize = 40;
-            backspace.FontSize = 40;
 
 
         }
@@ -73,16 +74,10 @@ namespace Calculator
         private void display0(object sender, RoutedEventArgs e)
         {
             displayer.Items.Clear();
-            int zero = 0;
-            
-            numbers.Add(0);
-
           
-
+            numbers.Add("0");
            joiner = string.Join("", numbers);
-            
-
-            displayer.Items.Add(joiner);
+           displayer.Items.Add(joiner);
 
 
 
@@ -91,9 +86,7 @@ namespace Calculator
         private void display1(object sender, RoutedEventArgs e)
         {
             displayer.Items.Clear();
-
-
-            numbers.Add(1);
+            numbers.Add("1");
             joiner = string.Join("", numbers);
             displayer.Items.Add(joiner);
 
@@ -101,46 +94,83 @@ namespace Calculator
 
         private void display2(object sender, RoutedEventArgs e)
         {
-            numbers.Add(2);
+            displayer.Items.Clear();
+            numbers.Add("2");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
         private void display3(object sender, RoutedEventArgs e)
         {
-            numbers.Add(3);
+            displayer.Items.Clear();
+            numbers.Add("3");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
         private void display4(object sender, RoutedEventArgs e)
         {
-            numbers.Add(4);
-            displayer.Items.Add(4);
+            displayer.Items.Clear();
+            numbers.Add("4");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
         private void display5(object sender, RoutedEventArgs e)
         {
-            numbers.Add(5);
+            displayer.Items.Clear();
+            numbers.Add("5");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
 
         private void display6(object sender, RoutedEventArgs e)
         {
-            numbers.Add(6);
+            displayer.Items.Clear();
+            numbers.Add("6");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
         private void display7(object sender, RoutedEventArgs e)
         {
-            numbers.Add(7);
+            displayer.Items.Clear();
+            numbers.Add("7");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
         private void display8(object sender, RoutedEventArgs e)
         {
-            numbers.Add(8);
+            displayer.Items.Clear();
+            numbers.Add("8");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
         private void display9(object sender, RoutedEventArgs e)
         {
-            numbers.Add(9);
+            displayer.Items.Clear();
+            numbers.Add("9");
+            joiner = string.Join("", numbers);
+            displayer.Items.Add(joiner);
         }
 
-     
+      
+
+
+        private void addNum(object sender, RoutedEventArgs e)
+        {
+           
+
+            displayer.Items.Clear();
+            numbers.Add("+");
+            joiner = string.Join("",numbers);
+            displayer.Items.Add(joiner);
+           
+            
+
+        }
     }
 }
